@@ -65,11 +65,55 @@
   flex-direction: column;
 }
 
-.sideNav{
+.sideNav {
   width: 100px;
   height: 80vh;
   position: relative;
-  left:5px;
-  top:0px;
+  left: 5px;
+  top: 0px;
   background-color: aqua;
+}
+.postsContainer {
+  margin: 2%;
+  display: grid;
+  grid-template-columns: auto auto;
+}
+.postCard {
+  text-decoration: none;
+  margin: 2px;
+  padding: 5px;
+  background-color: rgb(205, 255, 255);
+  border: 1px solid black;
+}
+.postCard:hover {
+  padding: 10px;
+  margin: 10px;
+  background-color: rgb(151, 235, 155);
+}
+.postPage {
+  margin: 2%;
+  margin-left:5%;
+  margin-right:5%;
+}
+.postTitle {
+  text-align: left;
+  font-size: xx-large;
+  font-weight: 600;
+}
+.postAuthor{
+  text-align: left;
+  font-style: italic;
+  font-size: small;
+}
+.seperator{
+  width: 100%;
+  height: 2px;
+  color: rgb(128, 128, 128);
+}
+.postContent{
+  overflow-y: scroll;
+  height: 68vh;
+  border: 1px solid rgb(181, 181, 181);
+  padding: 10px;
+  font-size: larger;
 }

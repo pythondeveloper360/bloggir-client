@@ -50,3 +50,10 @@ export function signUp(username, password, name) {
     },
   });
 }
+export function getAllPosts(){
+  return fetch(`${serverUrl}/posts/all`)
+}
+
+export function getPostBySlug(slug){
+  return fetch(`${serverUrl}/post/${slug}`)
+}

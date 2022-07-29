@@ -13,17 +13,20 @@ let NavBar = ({ loggedIn, screen, selectScreen }) => {
           {loggedIn ? (
             <>
               <Link
-              to = '/'
+                to="/"
                 className={`navBarItem ${
                   screen === "/home" ? "navBarSelected" : ""
                 }`}
+                onClick={() => {
+                  selectScreen("/home");
+                }}
               >
                 Home
               </Link>
               <Link
                 to="/cp"
                 onClick={() => {
-                  selectScreen("cp");
+                  selectScreen("/cp");
                 }}
                 className={`navBarItem ${
                   screen === "/cp" ? "navBarSelected" : ""
@@ -35,7 +38,7 @@ let NavBar = ({ loggedIn, screen, selectScreen }) => {
           ) : (
             <>
               <Link
-                to="/"
+                to="/login"
                 onClick={() => {
                   selectScreen("/login");
                 }}

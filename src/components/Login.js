@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "../App.css";
 import { loginUser } from "../ReqFuns";
-const Login = ({ loginAction }) => {
+const Login = ({ loginAction, login }) => {
   let [username, setUsername] = useState("");
   let [password, setPassword] = useState("");
   let [error, setError] = useState("");
@@ -14,6 +14,8 @@ const Login = ({ loginAction }) => {
       }}
     >
       <div className="loginBox">
+        <h3 className="loginInput">{login ? "You are already Logged In" : ""}</h3>
+
         <input
           className="loginInput"
           value={username}
